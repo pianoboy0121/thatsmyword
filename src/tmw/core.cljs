@@ -22,7 +22,9 @@
 
 (def host_name (r/atom ""))
 
-(def current_code (r/atom ""))
+(def current_code_text (r/atom ""))
+
+(def game_code (r/atom ""))
 
 
 ;; This atom needs to be hooked up to the server
@@ -34,24 +36,27 @@
   (.log js/console x))
 
 
+(defn enter_game [code]
+  (reset! game_code code)
+  (log game_code)
+  (dispatch [:start-game code]))
+
 (def alphabet ["A" "B" "C" "D" "E" "F" "G" "H" "I" "J" "K" "L" "M" "N" "O" "P" "Q" "R" "S" "T" "U" "V" "W" "X" "Y" "Z"])
 
 (defn generate_code []
   (clojure.string/join [(rand-nth alphabet) (rand-nth alphabet) (rand-nth alphabet) (rand-nth alphabet)]))
+
 (defn join_btn_press []
-  (log @current_code)
-  (log (some? (some #{@current_code} @active_games)))
-  (log @active_games)
-  (log ["press"])
+  (if (some? (some #{@current_code_text} @active_games))
+    (enter_game @current_code_text)
+    ())
   ;;if @current_code in @active_games, then navigate-to game/code
 )
 
 (defn host_btn_press []
   (let [code (generate_code)]
     (swap! active_games conj code)
-    (log code)
-    (dispatch [:start-game code])))
-;;go into the game here
+    (enter_game code)))
 
 (defn name_change_join [e]
   (let [text (.-value (.-target e))]
@@ -63,7 +68,7 @@
 
 (defn code_change [e]
   (let [text (.-value (.-target e))]
-    (reset! current_code text)))
+    (reset! current_code_text text)))
 
 ;; Components
 
@@ -93,7 +98,7 @@
    {:type "button" :value "Go!"
     :on-click join_btn_press
     :style {:width "100px"}
-    :disabled (or (= (count @join_name) 0) (not= (count @current_code) 4))}])
+    :disabled (or (= (count @join_name) 0) (not= (count @current_code_text) 4))}])
 
 (defn host_text_cpt []
   [:h3 "Host Game"])
@@ -125,18 +130,47 @@
   [:br] [:br]
   [host_btn_cpt]])
 
-;; Main
+(defn home_container []
+  [:div
+   [title_cpt]
+   [join_container]
+   [:br][:br][:br][:br]
+   [host_container]])
+
+
+
+
+
+
+
+
+
+
+
+
+
+;; ------------- Ingame ---------------
+
+(defn ingame_container []
+  [:div
+   [:h4 (str "Code: " @game_code)]])
+
+
+
+
+
+
+
+
+
+;; ------------- Main -----------------
 
 (defn main []
   (let [route (subscribe [:route-name])]
     (fn []
       (case @route
-        :home [:div
-                [title_cpt]
-                [join_container]
-                [:br] [:br] [:br] [:br]
-                [host_container]]
-        :game [:div "I AM THE GAME!"]
+        :home [home_container]
+        :game [ingame_container]
         [:div "Loading..."]
         )))
 )
