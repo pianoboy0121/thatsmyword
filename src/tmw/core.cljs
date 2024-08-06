@@ -3,11 +3,18 @@
       [clojure.string :as s]
       [reagent.core :as r]
       [reagent.dom :as d]
-      [re-frame.core :refer [dispatch subscribe reg-sub reg-event-fx]]
+      [re-frame.core :refer [dispatch subscribe reg-sub reg-event-fx reg-event-db]]
       [kee-frame.core :as k]))
 
 ;; -------------------------
 ;; Views
+
+(reg-event-db
+  :initialize
+  (fn [_ _]
+    {:code nil}))
+
+
 
 (reg-sub :route-name 
          (fn [db]
@@ -16,6 +23,28 @@
 (reg-event-fx :start-game
               (fn [{:keys [db]} [_ code]]
                 {:navigate-to [:game {:code code}]}))
+
+(reg-event-fx :join-game
+              (fn [{:keys [db]} [_ code]]
+                {:navigate-to [:game {:code code}]}))
+
+
+(comment "Player map template
+
+         :name 'Jeff'
+         :id 1
+
+
+join_name
+
+
+
+         ")
+
+
+
+
+
 
 ;; Atoms
 
@@ -29,18 +58,12 @@
 
 
 ;; This atom needs to be hooked up to the server
-(def active_games (r/atom []))
+(def active_games (r/atom {}))
 
 ;; Functions
 
 (defn log [x]
   (.log js/console x))
-
-
-(defn enter_game [code]
-  (reset! game_code code)
-  (log game_code)
-  (dispatch [:start-game code]))
 
 (def alphabet ["A" "B" "C" "D" "E" "F" "G" "H" "I" "J" "K" "L" "M" "N" "O" "P" "Q" "R" "S" "T" "U" "V" "W" "X" "Y" "Z"])
 
@@ -49,14 +72,16 @@
 
 (defn join_btn_press []
   (let [code (s/upper-case @current_code_text)]
-  (if (some? (some #{code} @active_games))
-    (enter_game code)
-    ())))
+  (when (contains? @active_games (keyword code))
+    (do 
+      (reset! game_code code)
+      (dispatch [:join-game code])))))
 
 (defn host_btn_press []
   (let [code (generate_code)]
-    (swap! active_games conj code)
-    (enter_game code)))
+    (swap! active_games conj [(keyword code) code])
+    (reset! game_code code)
+    (dispatch [:start-game code])))
 
 (defn name_change_join [e]
   (let [text (.-value (.-target e))]
