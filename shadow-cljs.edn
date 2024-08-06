@@ -2,7 +2,8 @@
  :dependencies [[binaryage/devtools "1.0.6"]
                 [nrepl "1.0.0"]
                 [reagent "1.1.1"]
-                [kee-frame "1.2.0"]]
+                [kee-frame "1.2.0"]
+                [re-frame "1.4.3"]]
  :builds       {:app {:target     :browser
                       :output-dir "public/js"
                       :asset-path "/js"

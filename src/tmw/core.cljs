@@ -1,11 +1,20 @@
 (ns tmw.core
     (:require
       [reagent.core :as r]
-      [reagent.dom :as d]))
+      [reagent.dom :as d]
+      [re-frame.core :refer [dispatch subscribe reg-sub reg-event-fx]]
+      [kee-frame.core :as k]))
 
 ;; -------------------------
 ;; Views
 
+(reg-sub :route-name 
+         (fn [db]
+           (-> db :kee-frame/route :data :name)))
+
+(reg-event-fx :start-game
+              (fn [{:keys [db]} [_ code]]
+                {:navigate-to [:game {:code code}]}))
 
 ;; Atoms
 
@@ -34,12 +43,14 @@
   (log (some? (some #{@current_code} @active_games)))
   (log @active_games)
   (log ["press"])
+  ;;if @current_code in @active_games, then navigate-to game/code
 )
 
 (defn host_btn_press []
   (let [code (generate_code)]
     (swap! active_games conj code)
-    (log code)))
+    (log code)
+    (dispatch [:start-game code])))
 ;;go into the game here
 
 (defn name_change_join [e]
@@ -117,18 +128,29 @@
 ;; Main
 
 (defn main []
-  [:div
-   [title_cpt]
-   [join_container]
-   [:br] [:br] [:br] [:br]
-   [host_container]
-])
+  (let [route (subscribe [:route-name])]
+    (fn []
+      (case @route
+        :home [:div
+                [title_cpt]
+                [join_container]
+                [:br] [:br] [:br] [:br]
+                [host_container]]
+        :game [:div "I AM THE GAME!"]
+        [:div "Loading..."]
+        )))
+)
 
 ;; -------------------------
 ;; Initialize app
 
 (defn mount-root []
-  (d/render [main] (.getElementById js/document "app")))
+ (k/start! {:debug?         true
+           :routes         [["/" :home]
+                            ["/game/:code" :game]]
+           :initial-db     {:testing true}
+           :root-component [main]})
+ )
 
 (defn ^:export init! []
   (mount-root))
