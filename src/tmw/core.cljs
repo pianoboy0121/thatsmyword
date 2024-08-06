@@ -1,5 +1,6 @@
 (ns tmw.core
     (:require
+      [clojure.string :as s]
       [reagent.core :as r]
       [reagent.dom :as d]
       [re-frame.core :refer [dispatch subscribe reg-sub reg-event-fx]]
@@ -47,11 +48,10 @@
   (clojure.string/join [(rand-nth alphabet) (rand-nth alphabet) (rand-nth alphabet) (rand-nth alphabet)]))
 
 (defn join_btn_press []
-  (if (some? (some #{@current_code_text} @active_games))
-    (enter_game @current_code_text)
-    ())
-  ;;if @current_code in @active_games, then navigate-to game/code
-)
+  (let [code (s/upper-case @current_code_text)]
+  (if (some? (some #{code} @active_games))
+    (enter_game code)
+    ())))
 
 (defn host_btn_press []
   (let [code (generate_code)]
@@ -81,7 +81,9 @@
 (defn code_input_cpt []
   [:input.gc_input
    {:type "text" :placeholder "Game Code"
-    :on-change code_change}])
+    :on-change code_change
+    :max-length "4"
+    :style {:text-transform "uppercase"}}])
 
 (defn name_input_join_cpt []
   [:input.name_input_join
