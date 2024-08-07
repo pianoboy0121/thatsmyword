@@ -32,12 +32,12 @@
 (reg-event-fx :start-game
               (fn [{:keys [db]} [_ code]]
                 {:db (assoc-in db [:players @num_players] {:name @host_name})
-                 :navigate-to [:game {:code code}]}))
+                 :navigate-to [:lobby {:code code}]}))
 
 (reg-event-fx :join-game
               (fn [{:keys [db]} [_ code]]
                 {:db (assoc-in db [:players @num_players] {:name @join_name})
-                 :navigate-to [:game {:code code}]}))
+                 :navigate-to [:lobby {:code code}]}))
 
 (reg-sub :players
          (fn [db _]
@@ -194,12 +194,15 @@ join_name
 
 ;; ------------- Ingame ---------------
 
-(defn ingame_container []
+(defn lobby_container []
   [:div
    [:h3.ingame-code-text (str "Code: " @game_code)]
    [:p.players-list-label "Players:"]
-   (js/alert @(subscribe [:players]))
-   [:p.players-list @(subscribe [:players])]])
+   (log (str @(subscribe [:players])))
+   (let [player-names (map :name (vals @(subscribe [:players])))]
+   [:ul.players-list {:style {:list-style-type "none" :padding "0" :margin "0"}}
+    (for [player player-names]
+      [:li player])])])
 ;; dynamically add text elements for each player
 
 
@@ -217,7 +220,7 @@ join_name
     (fn []
       (case @route
         :home [home_container]
-        :game [ingame_container]
+        :lobby [lobby_container]
         [:div "Loading..."]
         )))
 )
@@ -228,7 +231,7 @@ join_name
 (defn mount-root []
  (k/start! {:debug?         true
            :routes         [["/" :home]
-                            ["/game/:code" :game]]
+                            ["/game/:code" :lobby]]
            :initial-db     {:testing true}
            :root-component [main]})
  )
