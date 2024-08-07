@@ -19,8 +19,10 @@
 
 (def game_code (r/atom ""))
 
+(def num_players (r/atom 0))
 
 
+;; players = [{:name "Jeff"} {:name "James"}]
 
 
 (reg-sub :route-name 
@@ -29,12 +31,13 @@
 
 (reg-event-fx :start-game
               (fn [{:keys [db]} [_ code]]
-                {:db (assoc db :players @host_name)
+                {:db (assoc-in db [:players @num_players] {:name @host_name})
                  :navigate-to [:game {:code code}]}))
 
 (reg-event-fx :join-game
               (fn [{:keys [db]} [_ code]]
-                {:navigate-to [:game {:code code}]}))
+                {:db (assoc-in db [:players @num_players] {:name @join_name})
+                 :navigate-to [:game {:code code}]}))
 
 (reg-sub :players
          (fn [db _]
@@ -83,12 +86,14 @@ join_name
   (when (contains? @active_games (keyword code))
     (do 
       (reset! game_code code)
+      (swap! num_players inc)
       (dispatch [:join-game code])))))
 
 (defn host_btn_press []
   (let [code (generate_code)]
     (swap! active_games conj [(keyword code) code])
     (reset! game_code code)
+    (swap! num_players inc)
     (dispatch [:start-game code])))
 
 (defn name_change_join [e]
@@ -116,7 +121,7 @@ join_name
    {:type "text" :placeholder "Game Code"
     :on-change code_change
     :max-length "4"
-    :pattern "[a-ZA-Z]{4}"
+    :pattern "[A-Za-z]{4}"
     :style {:text-transform "uppercase"}}])
 
 (defn name_input_join_cpt []
@@ -193,6 +198,7 @@ join_name
   [:div
    [:h3.ingame-code-text (str "Code: " @game_code)]
    [:p.players-list-label "Players:"]
+   (js/alert @(subscribe [:players]))
    [:p.players-list @(subscribe [:players])]])
 ;; dynamically add text elements for each player
 
