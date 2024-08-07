@@ -173,8 +173,8 @@
       "tokyo": "Tokyo",
       "beijing": "Beijing"
     }
-   },
-   {
+  },
+  {
     "PromptText": "One of the seven deadly sins.",
     "CorrectAnswers": {
       "pride": "Pride",
@@ -185,8 +185,8 @@
       "sloth": "Sloth",
       "wrath": "Wrath"
     }
-   },
-   {
+  },
+  {
     "PromptText": "A type of quadrilateral.",
     "CorrectAnswers": {
       "square": "Square",
@@ -198,8 +198,8 @@
       "kite": "Kite",
       "irregular": "Irregular"
     }
-   },
-   {
+  },
+  {
     "PromptText": "One of the top 10 best-selling video games of all time.",
     "CorrectAnswers": {
       "minecraft": "Minecraft",
@@ -215,8 +215,8 @@
       "super mario bros": "Super Mario Bros.",
       "overwatch": "Overwatch"
     }
-   },
-   {
+  },
+  {
     "PromptText": "One of the seven wonders of the ancient world.",
     "CorrectAnswers": {
       "great pyramid of giza": "Great Pyramid of Giza",
@@ -231,8 +231,8 @@
       "mausoleum": "Mausoleum at Halicarnassus",
       "mausoleum at halicarnassus": "Mausoleum at Halicarnassus"
     }
-   },
-   {
+  },
+  {
     "PromptText": "One of the first seven presidents of the United States.",
     "CorrectAnswers": {
       "george washington": "George Washington",
@@ -250,8 +250,8 @@
       "andrew jackson": "Andrew Jackson",
       "jackson": "Andrew Jackson"
     }
-   },
-   {
+  },
+  {
     "PromptText": "A country with a population greater than 200 million.",
     "CorrectAnswers": {
       "china": "China",
@@ -264,8 +264,8 @@
       "nigeria": "Nigeria",
       "brazil": "Brazil"
     }
-   },
-   {
+  },
+  {
     "PromptText": "A swimming stroke contested in mainstream swimming competitions.",
     "CorrectAnswers": {
       "freestyle": "Freestyle",
@@ -273,5 +273,329 @@
       "breaststroke": "Breaststroke",
       "butterfly": "Butterfly"
     }
-   }
+  },
+  {
+    "PromptText": "A nitrogenous base found in genetic material.",
+    "CorrectAnswers": {
+      "thymine": "Thymine",
+      "adenine": "Adenine",
+      "guanine": "Guanine",
+      "cytosine": "Cytosine",
+      "uracil": "Uracil"
+    }
+  },
+  {
+    "PromptText": "A letter on the bottom row of a QWERTY keyboard.",
+    "CorrectAnswers": {
+      "z": "Z",
+      "x": "X",
+      "c": "C",
+      "v": "V",
+      "b": "B",
+      "n": "N",
+      "m": "M"
+    }
+  },
+  {
+    "PromptText": "A school subject.",
+    "CorrectAnswers": {
+      "math": "Math",
+      "english": "English",
+      "science": "Science",
+      "history": "History",
+      "language": "Foreign Language",
+      "foreign language": "Foreign Language",
+      "pe": "P.E.",
+      "p.e.": "P.E.",
+      "health": "Health",
+      "music": "Music",
+      "engineering": "Engineering"
+    }
+  },
+  {
+    "PromptText": "A note of the solfège of the musical major scale.",
+    "CorrectAnswers": {
+      "do": "Do",
+      "re": "Re",
+      "mi": "Mi",
+      "fa": "Fa",
+      "so": "So",
+      "la": "La",
+      "ti": "Ti"
+    }
+  },
+  {
+    "PromptText": "A book in the Bible starting with the letter J.",
+    "CorrectAnswers": {
+      "joshua": "Joshua",
+      "judges": "Judges",
+      "job": "Job",
+      "jeremiah": "Jeremiah",
+      "joel": "Joel",
+      "jonah": "Jonah",
+      "john": "John",
+      "james": "James",
+      "jude": "Jude"
+    }
+  },
+  {
+    "PromptText": "A current Olympic sport involving water.",
+    "CorrectAnswers": {
+      "artistic swimming": "Artistic Swimming",
+      "synchronized swimming": "Artistic Swimming",
+      "canoe": "Canoe",
+      "diving": "Diving",
+      "rowing": "Rowing",
+      "sailing": "Sailing",
+      "surfing": "Surfing",
+      "swimming": "Swimming",
+      "triathlon": "Triathlon",
+      "water polo": "Water Polo"
+    }
+  },
+  {
+    "PromptText": "An event contested in gymnastics.",
+    "CorrectAnswers": {
+      "floor": "Floor",
+      "balance beam": "Balance Beam",
+      "beam": "Balance Beam",
+      "uneven bars": "Uneven Bars",
+      "vault": "Vault",
+      "rings": "Rings",
+      "pommel horse": "Pommel Horse",
+      "parallel bars": "Parallel Bars",
+      "high bar": "Horizontal Bar",
+      "horizontal bar": "Horizontal Bar"
+    }
+  },
+  {
+    "PromptText": "One of Hawaii's major islands.",
+    "CorrectAnswers": {
+      "hawaii": "Hawai'i",
+      "hawai'i": "Hawai'i",
+      "maui": "Maui",
+      "oahu": "O'ahu",
+      "o'ahu": "O'ahu",
+      "kauai": "Kaua'i",
+      "kaua'i": "Kaua'i",
+      "molokai": "Moloka'i",
+      "moloka'i": "Moloka'i",
+      "lanai": "Lāna'i",
+      "lana'i": "Lāna'i",
+      "lāna'i": "Lāna'i",
+      "niihau": "Ni'ihau",
+      "ni'ihau": "Ni'ihau",
+      "kahoolawe": "Kaho'olawe",
+      "kaho'olawe": "Kaho'olawe"
+    }
+  },
+  {
+    "PromptText": "A day of the week.",
+    "CorrectAnswers": {
+      "monday": "Monday",
+      "tuesday": "Tuesday",
+      "wednesday": "Wednesday",
+      "thursday": "Thursday",
+      "friday": "Friday",
+      "saturday": "Saturday",
+      "sunday": "Sunday"
+    }
+  },
+  {
+    "PromptText": "An ore in Minecraft.",
+    "CorrectAnswers": {
+      "copper": "Copper",
+      "coal": "Coal",
+      "iron": "Iron",
+      "gold": "Gold",
+      "redstone": "Redstone",
+      "lapis lazuli": "Lapis Lazuli",
+      "lapis": "Lapis Lazuli",
+      "emerald": "Emerald",
+      "diamond": "Diamond",
+      "quartz": "Nether Quartz",
+      "nether quartz": "Nether Quartz"
+    }
+  },
+  {
+    "PromptText": "A layer of the Earth's atmosphere.",
+    "CorrectAnswers": {
+      "troposphere": "Troposphere",
+      "stratosphere": "Stratosphere",
+      "mesosphere": "Mesosphere",
+      "thermosphere": "Thermosphere",
+      "exosphere": "Exosphere"
+    }
+  },
+  {
+    "PromptText": "One of the five senses.",
+    "CorrectAnswers": {
+      "sight": "Sight",
+      "vision": "Sight",
+      "hearing": "Hearing",
+      "touch": "Touch",
+      "taste": "Taste",
+      "smell": "Smell"
+    }
+  },
+  {
+    "PromptText": "One of the emotions from the movie Inside Out.",
+    "CorrectAnswers": {
+      "joy": "Joy",
+      "sadness": "Sadness",
+      "fear": "Fear",
+      "anger": "Anger",
+      "disgust": "Disgust"
+    }
+  },
+  {
+    "PromptText": "A subtitle of a movie in the mainline Star Wars series.",
+    "CorrectAnswers": {
+      "the phantom menace": "The Phantom Menace",
+      "attack of the clones": "Attack of the Clones",
+      "revenge of the sith": "Revenge of the Sith",
+      "a new hope": "A New Hope",
+      "the empire strikes back": "The Empire Strikes Back",
+      "return of the jedi": "Return of the Jedi",
+      "the force awakens": "The Force Awakens",
+      "the last jedi": "The Last Jedi",
+      "the rise of skywalker": "The Rise of Skywalker"
+    }
+  },
+  {
+    "PromptText": "One of the '7 Habits of Highly Effective People'.",
+    "CorrectAnswers": {
+      "be proactive": "Be Proactive",
+      "begin with the end in mind": "Begin With The End In Mind",
+      "put first things first": "Put First Things First",
+      "think win-win": "Think Win-Win",
+      "think win win": "Think Win-Win",
+      "seek first to understand, then to be understood": "Seek First to Understand, Then to Be Understood",
+      "seek first to understand then to be understood": "Seek First to Understand, Then to Be Understood",
+      "synergize": "Synergize",
+      "sharpen the saw": "Sharpen The Saw"
+    }
+  },
+  {
+    "PromptText": "A subtitle of a book in the Harry Potter series.",
+    "CorrectAnswers": {
+      "the sorcerers stone": "The Sorcerer's Stone",
+      "the sorcerer's stone": "The Sorcerer's Stone",
+      "the philosophers stone": "The Sorcerer's Stone",
+      "the philosopher's stone": "The Sorcerer's Stone",
+      "the chamber of secrets": "The Chamber of Secrets",
+      "the prisoner of azkaban": "The Prisoner of Azkaban",
+      "the goblet of fire": "The Goblet of Fire",
+      "the order of the phoenix": "The Order of the Phoenix",
+      "the half blood prince": "The Half-Blood Prince",
+      "the half-blood prince": "The Half-Blood Prince",
+      "the deathly hallows": "The Deathly Hallows"
+    }
+  },
+  {
+    "PromptText": "One of the five stages of grief.",
+    "CorrectAnswers": {
+      "denial": "Denial",
+      "anger": "Anger",
+      "bargaining": "Bargaining",
+      "depression": "Depression",
+      "acceptance": "Acceptance"
+    }
+  },
+  {
+    "PromptText": "A Disney princess.",
+    "CorrectAnswers": {
+      "snow white": "Snow White",
+      "cinderella": "Cinderella",
+      "aurora": "Aurora",
+      "ariel": "Ariel",
+      "belle": "Belle",
+      "jasmine": "Jasmine",
+      "pocahontas": "Pocahontas",
+      "mulan": "Mulan",
+      "tiana": "Tiana",
+      "rapunzel": "Rapunzel",
+      "merida": "Merida",
+      "moana": "Moana",
+      "raya": "Raya"
+    }
+  },
+  {
+    "PromptText": "One of the top nine highest grossing movies of all time.",
+    "CorrectAnswers": {
+      "avatar": "Avatar",
+      "avengers endgame": "Avengers: Endgame",
+      "avengers: endgame": "Avengers: Endgame",
+      "avatar the way of water": "Avatar: The Way of Water",
+      "avatar: the way of water": "Avatar: The Way of Water",
+      "titanic": "Titanic",
+      "star wars the force awakens": "Star Wars: The Force Awakens",
+      "star wars: the force awakens": "Star Wars: The Force Awakens",
+      "avengers infinity war": "Avengers: Infinity War",
+      "avengers: infinity war": "Avengers: Infinity War",
+      "spider man no way home": "Spider-Man: No Way Home",
+      "spider man: no way home": "Spider-Man: No Way Home",
+      "spider-man no way home": "Spider-Man: No Way Home",
+      "spider-man: no way home": "Spider-Man: No Way Home",
+      "jurassic world": "Jurassic World",
+      "the lion king": "The Lion King"
+    }
+  },
+  {
+    "PromptText": "One of the Earth's continents.",
+    "CorrectAnswers": {
+      "north america": "North America",
+      "south america": "South America",
+      "africa": "Africa",
+      "europe": "Europe",
+      "asia": "Asia",
+      "australia": "Oceania",
+      "oceania": "Oceania",
+      "antarctica": "Antarctica"
+    }
+  },
+  {
+    "PromptText": "A state of matter.",
+    "CorrectAnswers": {
+      "solid": "Solid",
+      "liquid": "Liquid",
+      "gas": "Gas",
+      "plasma": "Plasma",
+      "bose einstein condensates": "Bose-Einstein Condensates",
+      "bose-einstein condensates": "Bose-Einstein Condensates"
+    }
+  },
+  {
+    "PromptText": "Statistics on a nutrition facts label.",
+    "CorrectAnswers": {
+      "calories": "Calories",
+      "servings": "Servings",
+      "fat": "Fat",
+      "cholesterol": "Cholesterol",
+      "sodium": "Sodium",
+      "carbohydrates": "Carbohydrates",
+      "protein": "Protein",
+      "vitamins": "Vitamins"
+    }
+  },
+  {
+    "PromptText": "A home console manufactured by Nintendo.",
+    "CorrectAnswers": {
+      "color tv game": "Color TV-Game",
+      "color tv-game": "Color TV-Game",
+      "nes": "NES",
+      "famicom": "NES",
+      "nintendo entertainment system": "NES",
+      "snes": "SNES",
+      "super famicom": "SNES",
+      "super nintendo entertainment system": "SNES",
+      "nintendo 64": "Nintendo 64",
+      "n64": "Nintendo 64",
+      "gamecube": "GameCube",
+      "wii": "Wii",
+      "wii u": "Wii U",
+      "nintendo switch": "Nintendo Switch",
+      "switch": "Nintendo Switch"
+    }
+  },
 ]
