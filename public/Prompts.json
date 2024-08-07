@@ -1,0 +1,235 @@
+[
+  {
+    "PromptText": "One of the planets in our solar system.",
+    "CorrectAnswers": {
+      "mercury": "Mercury",
+      "venus": "Venus",
+      "earth": "Earth",
+      "mars": "Mars",
+      "jupiter": "Jupiter",
+      "saturn": "Saturn",
+      "uranus": "Uranus",
+      "neptune": "Neptune"
+    }
+  },
+  {
+    "PromptText": "One of the colors of the rainbow.",
+    "CorrectAnswers": {
+      "red": "Red",
+      "orange": "Orange",
+      "yellow": "Yellow",
+      "green": "Green",
+      "blue": "Blue",
+      "indigo": "Indigo",
+      "violet": "Violet",
+      "purple": "Violet"
+    }
+  },
+  {
+    "PromptText": "A country in Central America.",
+    "CorrectAnswers": {
+      "mexico": "Mexico",
+      "guatemala": "Guatemala",
+      "honduras": "Honduras",
+      "nicaragua": "Nicaragua",
+      "el salvador": "El Salvador",
+      "costa rica": "Costa Rica",
+      "panama": "Panama",
+      "belize": "Belize"
+    }
+  },
+  {
+    "PromptText": "A noble gas.",
+    "CorrectAnswers": {
+      "helium": "Helium",
+      "neon": "Neon",
+      "argon": "Argon",
+      "krypton": "Krypton",
+      "xenon": "Xenon",
+      "radon": "Radon",
+      "oganesson": "Oganesson"
+    }
+  },
+  {
+    "PromptText": "A top-10 fast food restaurant in the USA.",
+    "CorrectAnswers": {
+      "mcdonalds": "McDonald's",
+      "mcdonald's": "McDonald's",
+      "starbucks": "Starbucks",
+      "subway": "Subway",
+      "taco bell": "Taco Bell",
+      "chick-fil-a": "Chick-Fil-A",
+      "chickfila": "Chick-Fil-A",
+      "chick fil a": "Chick-Fil-A",
+      "wendy's": "Wendy's",
+      "wendys": "Wendy's",
+      "burger king": "Burger King",
+      "dunkin'": "Dunkin'",
+      "dunkin": "Dunkin'",
+      "dominos": "Domino's",
+      "domino's": "Domino's",
+      "panera bread": "Panera Bread"
+    }
+  },
+  {
+    "PromptText": "One of the top ten most populous states in the U.S.",
+    "CorrectAnswers": {
+      "california": "California",
+      "texas": "Texas",
+      "florida": "Florida",
+      "new york": "New York",
+      "pennsylvania": "Pennsylvania",
+      "illinois": "Illinois",
+      "ohio": "Ohio",
+      "georgia": "Georgia",
+      "north carolina": "North Carolina",
+      "michigan": "Michigan"
+    }
+  },
+  {
+    "PromptText": "A metric prefix denoting a value smaller than one.",
+    "CorrectAnswers": {
+      "deci": "Deci",
+      "centi": "Centi",
+      "milli": "Milli",
+      "micro": "Micro",
+      "nano": "Nano",
+      "pico": "Pico",
+      "femto": "Femto",
+      "atto": "Atto",
+      "zepto": "Zepto",
+      "yocto": "Yocto"
+    }
+  },
+  {
+    "PromptText": "A metric prefix denoting a value larger than one.",
+    "CorrectAnswers": {
+      "deca": "Deca",
+      "hecto": "Hecto",
+      "kilo": "Kilo",
+      "mega": "Mega",
+      "giga": "Giga",
+      "tera": "Tera",
+      "peta": "Peta",
+      "exa": "Exa",
+      "zetta": "Zetta",
+      "yotta": "Yotta"
+    }
+  },
+  {
+    "PromptText": "A month containing 31 days.",
+    "CorrectAnswers": {
+      "january": "January",
+      "march": "March",
+      "may": "May",
+      "july": "July",
+      "august": "August",
+      "october": "October",
+      "december": "December"
+    }
+  },
+  {
+    "PromptText": "A perfect square less than 100.",
+    "CorrectAnswers": {
+      "0": "0",
+      "1": "1",
+      "4": "4",
+      "9": "9",
+      "16": "16",
+      "25": "25",
+      "36": "36",
+      "49": "49",
+      "64": "64",
+      "81": "81"
+    }
+  },
+  {
+    "PromptText": "One of the thirteen colonies of the United States.",
+    "CorrectAnswers": {
+      "new hampshire": "New Hampshire",
+      "massachusetts": "Massachusetts",
+      "rhode island": "Rhode Island",
+      "connecticut": "Connecticut",
+      "new york": "New York",
+      "new jersey": "New Jersey",
+      "pennsylvania": "Pennsylvania",
+      "delaware": "Delaware",
+      "maryland": "Maryland",
+      "virginia": "Virginia",
+      "north carolina": "North Carolina",
+      "south carolina": "South Carolina",
+      "georgia": "Georgia"
+    }
+  },
+  {
+    "PromptText": "A host city of the Olympic Games since 2010.",
+    "CorrectAnswers": {
+      "vancouver": "Vancouver",
+      "london": "London",
+      "sochi": "Sochi",
+      "rio de janeiro": "Rio de Janeiro",
+      "rio": "Rio de Janeiro",
+      "pyeongchang": "Pyeongchang",
+      "tokyo": "Tokyo",
+      "beijing": "Beijing"
+    }
+   },
+   {
+    "PromptText": "One of the seven deadly sins.",
+    "CorrectAnswers": {
+      "pride": "Pride",
+      "lust": "Lust",
+      "greed": "Greed",
+      "gluttony": "Gluttony",
+      "envy": "Envy",
+      "sloth": "Sloth",
+      "wrath": "Wrath"
+    }
+   },
+   {
+    "PromptText": "A type of quadrilateral.",
+    "CorrectAnswers": {
+      "square": "Square",
+      "rectangle": "Rectangle",
+      "trapezoid": "Trapezoid",
+      "trapezium": "Trapezoid",
+      "parallelogram": "Parallelogram",
+      "rhombus": "Rhombus",
+      "kite": "Kite",
+      "irregular": "Irregular"
+    }
+   },
+   {
+    "PromptText": "One of the top 10 best-selling video games of all time.",
+    "CorrectAnswers": {
+      "minecraft": "Minecraft",
+      "grand theft auto v": "Grand Theft Auto V",
+      "gta v": "Grand Theft Auto V",
+      "tetris": "Tetris",
+      "wii sports": "Wii Sports",
+      "pubg": "PUBG: Battlegrounds",
+      "mario kart 8": "Mario Kart 8",
+      "red dead redemption 2": "Red Dead Redemption 2",
+      "terraria": "Terraria",
+      "super mario bros.": "Super Mario Bros.",
+      "super mario bros": "Super Mario Bros.",
+      "overwatch": "Overwatch"
+    }
+   },
+   {
+    "PromptText": "One of the seven wonders of the ancient world.",
+    "CorrectAnswers": {
+      "great pyramid of giza": "Great Pyramid of Giza",
+      "the great pyramid of giza": "Great Pyramid of Giza",
+      "hanging gardens of babylon": "Hanging Gardens of Babylon",
+      "statue of zeus": "Statue of Zeus at Olympia",
+      "statue of zeus at olympia": "Statue of Zeus at Olympia",
+      "temple of artemis": "Temple of Artemis at Ephesus",
+      "temple of artemis at ephesus": "Temple of Artemis at Ephesus",
+      "colossus of rhodes": "Colossus of Rhodes",
+      "lighthouse of alexandria": "Lighthouse of Alexandria",
+      "mausoleum": "Mausoleum at Halicarnassus",
+      "mausoleum at halicarnassus": "Mausoleum at Halicarnassus"
+    }
+   },
+]
