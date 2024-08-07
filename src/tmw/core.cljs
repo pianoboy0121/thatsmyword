@@ -9,10 +9,17 @@
 ;; -------------------------
 ;; Views
 
-(reg-event-db
-  :initialize
-  (fn [_ _]
-    {:code nil}))
+
+
+(def join_name (r/atom ""))
+
+(def host_name (r/atom ""))
+
+(def current_code_text (r/atom ""))
+
+(def game_code (r/atom ""))
+
+
 
 
 
@@ -22,11 +29,18 @@
 
 (reg-event-fx :start-game
               (fn [{:keys [db]} [_ code]]
-                {:navigate-to [:game {:code code}]}))
+                {:db (assoc db :players @host_name)
+                 :navigate-to [:game {:code code}]}))
 
 (reg-event-fx :join-game
               (fn [{:keys [db]} [_ code]]
                 {:navigate-to [:game {:code code}]}))
+
+(reg-sub :players
+         (fn [db _]
+           (:players db)))
+
+
 
 
 (comment "Player map template
@@ -46,15 +60,9 @@ join_name
 
 
 
-;; Atoms
 
-(def join_name (r/atom ""))
 
-(def host_name (r/atom ""))
 
-(def current_code_text (r/atom ""))
-
-(def game_code (r/atom ""))
 
 
 ;; This atom needs to be hooked up to the server
@@ -108,16 +116,19 @@ join_name
    {:type "text" :placeholder "Game Code"
     :on-change code_change
     :max-length "4"
+    :pattern "[a-ZA-Z]{4}"
     :style {:text-transform "uppercase"}}])
 
 (defn name_input_join_cpt []
   [:input.name_input_join
    {:type "text" :placeholder "Player Name"
+    :pattern "[a-zA-Z0-9]+"
     :on-change name_change_join}])
 
 (defn name_input_host_cpt []
   [:input.name_input_host
    {:type "text" :placeholder "Player Name"
+    :pattern "[a-zA-Z0-9]+"   
     :on-change name_change_host}])
 
 (defn join_btn_cpt []
@@ -180,7 +191,10 @@ join_name
 
 (defn ingame_container []
   [:div
-   [:h4 (str "Code: " @game_code)]])
+   [:h3.ingame-code-text (str "Code: " @game_code)]
+   [:p.players-list-label "Players:"]
+   [:p.players-list @(subscribe [:players])]])
+;; dynamically add text elements for each player
 
 
 
