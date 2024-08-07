@@ -4,7 +4,8 @@
                 [reagent "1.1.1"]
                 [kee-frame "1.2.0"]
                 [re-frame "1.4.3"]
-		]
+                [lambdaisland/fetch "1.5.83"]
+                [funcool/promesa "11.0.678"]]
  :builds       {:app {:target     :browser
                       :output-dir "public/js"
                       :asset-path "/js"

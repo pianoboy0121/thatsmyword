@@ -1,7 +1,5 @@
 (ns tmw.lobby
   (:require
-   [clojure.string :as s]
-   [reagent.core :as r]
    [re-frame.core :refer [dispatch subscribe]]
    [tmw.data :as data]))
 

@@ -80,24 +80,24 @@
     :disabled (= (count @data/host_name) 0)}])
 
 (defn join_container []
- [:div
-  [join_text_cpt]
-  [code_input_cpt]
-  [:br]
-  [name_input_join_cpt]
-  [:br] [:br]
-  [join_btn_cpt]])
+  [:div
+   [join_text_cpt]
+   [code_input_cpt]
+   [:br]
+   [name_input_join_cpt]
+   [:br] [:br]
+   [join_btn_cpt]])
 
 (defn host_container []
- [:div
-  [host_text_cpt]
-  [name_input_host_cpt]
-  [:br] [:br]
-  [host_btn_cpt]])
+  [:div
+   [host_text_cpt]
+   [name_input_host_cpt]
+   [:br] [:br]
+   [host_btn_cpt]])
 
 (defn home_container []
   [:div
    [title_cpt]
    [join_container]
-   [:br][:br][:br][:br]
+   [:br] [:br] [:br] [:br]
    [host_container]])

@@ -1,18 +1,17 @@
 (ns tmw.core
-    (:require
-     [clojure.string :as s]
-     [reagent.core :as r]
-     [reagent.dom :as d]
-     [re-frame.core :refer [dispatch subscribe reg-sub reg-event-fx reg-event-db]]
-     [kee-frame.core :as k]
-     [tmw.data :as data] 
-     [tmw.home :as home]
-     [tmw.lobby :as lobby]
-     ))
+  (:require
+   [re-frame.core :refer [dispatch subscribe reg-sub reg-event-fx reg-event-db]]
+   [kee-frame.core :as k]
+   [tmw.data :as data]
+   [tmw.home :as home]
+   [tmw.lobby :as lobby]
+   [tmw.game :as game]
+   [lambdaisland.fetch :as fetch]
+   [promesa.core :as p]))
 
 
 
-(reg-sub :route-name 
+(reg-sub :route-name
          (fn [db]
            (-> db :kee-frame/route :data :name)))
 
@@ -44,16 +43,14 @@
 ;; Functions
 
 (defn log [x]
-  (.log js/console x))
+  (.log  js/console x))
 
 
 
 
 ;; ----------- Ingame -----------------
 
-(defn ingame_container []
-  [:div
-   "Skibidi"])
+
 
 
 
@@ -63,27 +60,28 @@
 ;; ------------- Main -----------------
 
 (defn main []
+
+  (p/let [resp (fetch/get "/Prompts.json")
+          prompts (:body resp)]
+    (reset! data/prompts (clj->js prompts)))
   (let [route (subscribe [:route-name])]
     (fn []
       (case @route
         :home [home/home_container]
         :lobby [lobby/lobby_container]
-        :playing [ingame_container]
-        [:div "Loading..."]
-        )))
-)
+        :playing [game/ingame_container]
+        [:div "Loading..."]))))
 
 ;; -------------------------
 ;; Initialize app
 
 (defn mount-root []
- (k/start! {:debug?         true
-           :routes         [["/" :home]
-                            ["/game/:code" :lobby]
-                            ["/game/:code/play" :playing]]
-           :initial-db     {:testing true}
-           :root-component [main]})
- )
+  (k/start! {:debug?         true
+             :routes         [["/" :home]
+                              ["/game/:code" :lobby]
+                              ["/game/:code/play" :playing]]
+             :initial-db     {:testing true}
+             :root-component [main]}))
 
 (defn ^:export init! []
   (mount-root))

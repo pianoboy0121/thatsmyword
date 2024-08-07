@@ -1,8 +1,6 @@
 (ns tmw.data
   (:require
-   [clojure.string :as s]
-   [reagent.core :as r]
-   [re-frame.core :refer [dispatch]]))
+   [reagent.core :as r]))
 
 (def join_name (r/atom ""))
 
@@ -15,3 +13,5 @@
 (def num_players (r/atom 0))
 
 (def active_games (r/atom {}))
+
+(def prompts (r/atom []))

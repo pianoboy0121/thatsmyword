@@ -232,4 +232,46 @@
       "mausoleum at halicarnassus": "Mausoleum at Halicarnassus"
     }
    },
+   {
+    "PromptText": "One of the first seven presidents of the United States.",
+    "CorrectAnswers": {
+      "george washington": "George Washington",
+      "washington": "George Washington",
+      "john adams": "John Adams",
+      "adams": "John Adams",
+      "thomas jefferson": "Thomas Jefferson",
+      "jefferson": "Thomas Jefferson",
+      "james madison": "James Madison",
+      "madison": "James Madison",
+      "james monroe": "James Monroe",
+      "monroe": "James Monroe",
+      "john quincy adams": "John Quincy Adams",
+      "quincy adams": "John Quincy Adams",
+      "andrew jackson": "Andrew Jackson",
+      "jackson": "Andrew Jackson"
+    }
+   },
+   {
+    "PromptText": "A country with a population greater than 200 million.",
+    "CorrectAnswers": {
+      "china": "China",
+      "india": "India",
+      "united states": "United States of America",
+      "usa": "United States of America",
+      "united states of america": "United States of America",
+      "indonesia": "Indonesia",
+      "pakistan": "Pakistan",
+      "nigeria": "Nigeria",
+      "brazil": "Brazil"
+    }
+   },
+   {
+    "PromptText": "A swimming stroke contested in mainstream swimming competitions.",
+    "CorrectAnswers": {
+      "freestyle": "Freestyle",
+      "backstroke": "Backstroke",
+      "breaststroke": "Breaststroke",
+      "butterfly": "Butterfly"
+    }
+   }
 ]
