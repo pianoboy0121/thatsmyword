@@ -1,4 +1,4 @@
-[
+d[
   {
     "PromptText": "One of the planets in our solar system.",
     "CorrectAnswers": {
@@ -598,4 +598,98 @@
       "switch": "Nintendo Switch"
     }
   },
+  {
+    "PromptText": "One of the top thirteen highest-rated video games on Metacritic.",
+    "CorrectAnswers": {
+      "the legend of zelda: ocarina of time": "The Legend of Zelda: Ocarina of Time",
+      "ocarina of time": "The Legend of Zelda: Ocarina of Time",
+      "soulcalibur": "SoulCalibur",
+      "grand theft auto iv": "Grand Theft Auto IV",
+      "grand theft auto 4": "Grand Theft Auto IV",
+      "gta iv": "Grand Theft Auto IV",
+      "gta 4": "Grand Theft Auto IV",
+      "grand theft auto iii": "Grand Theft Auto III",
+      "grand theft auto 3": "Grand Theft Auto III",
+      "gta iii": "Grand Theft Auto III",
+      "gta 3": "Grand Theft Auto III",
+      "grand theft auto v": "Grand Theft Auto V",
+      "grand theft auto 5": "Grand Theft Auto V",
+      "gta 5": "Grand Theft Auto V",
+      "gta v": "Grand Theft Auto V",
+      "mario galaxy": "Super Mario Galaxy",
+      "super mario galaxy": "Super Mario Galaxy",
+      "mario galaxy 2": "Super Mario Galaxy 2",
+      "super mario galaxy 2": "Super Mario Galaxy 2",
+      "breath of the wild": "The Legend of Zelda: Breath of the Wild",
+      "the legend of zelda: breath of the wild": "The Legend of Zelda: Breath of the Wild",
+      "perfect dark": "Perfect Dark",
+      "tony hawk's pro skater 3": "Tony Hawk's Pro Skater 3",
+      "red dead redemption 2": "Red Dead Redemption 2",
+      "metriod prime": "Metroid Prime",
+      "super mario odyssey": "Super Mario Odyssey",
+      "mario odyssey": "Super Mario Odyssey"
+      }
+   },
+     {
+    "PromptText": "A major war that involved the United States of America before the year 2020.",
+    "CorrectAnswers": {
+      "the revolutionary war": "Revolutionary War",
+      "revolutionary war": "Revolutionary War",
+      "civil war": "Civil War",
+      "the civil war": "Civil War",
+      "world war i": "World War I",
+      "world war ii": "World War II",
+      "the war of 1812": "The War of 1812",
+      "the spanish american war": "Spanish-American War",
+      "spanish-american war": "Spanish-American War",
+      "the spanish-american war": "Spanish-American War",
+      "spanish american war": "Spanish-American War",
+      "the mexican american war": "Mexican-American War",
+      "mexican-american war": "Mexican-American War",
+      "the mexican-american war": "Mexican-American War",
+      "mexican american war": "Mexican-American War",
+      "war in afghanistan": "War in Afghanistan",
+      "the war in afghanistan": "War in Afghanistan",
+      "the persian gulf war": "Gulf War",
+      "gulf war": "Gulf War",
+      "persian gulf war": "Gulf War",
+      "the gulf war": "Gulf War",
+      "the iraq war": "Iraq War",
+      "iraq war": "Iraq War",
+      "the seven years' war": "Seven Years' War",
+      "seven years' war": "Seven Years' War",
+      "seven years war": "Seven Years' War",
+      "the french and indian war": "French and Indian War",
+      "french and indian war": "French and Indian War",
+      "french indian war": "French and Indian War",
+      "korean war": "Korean War",
+      "the korean war": "Korean War",
+      "the vietnam war": "Vietnam War",
+      "vietnam war": "Vietnam War"
+      }
+    },
+    {
+    "PromptText": "Top seven artists on Spotify, Apple Music, and other audio streaming services.",
+    "CorrectAnswers": {
+      "taylor swift": "Taylor Swift",
+      "drake": "Drake",
+      "ed sheeran": "Ed Sheeran",
+      "bad bunny": "Bad Bunny",
+      "the weekend": "The Weeknd",
+      "the weeknd": "The Weeknd",
+      "ariana grande": "Ariana Grande",
+      "justin bieber": "Justin Bieber",
+      }
+    },
+    {
+    "PromptText": "The five YouTube channels who held the most-subscribed title for the longest.",
+    "CorrectAnswers": {
+      "pewdiepie": "PewDiePie",
+      "t-series": "T-Series",
+      "nigahiga": "nigahiga",
+      "smosh": "Smosh",
+      "lonelygirl15": "lonelygirl15",
+      }
+    },
+    {
 ]
